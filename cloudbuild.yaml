@@ -1,5 +1,5 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: [ 'build', '-t', 'grc.io/$PROJECT_ID/cloud_run_image_hanksel', '.' ]
+  args: [ 'build', '-t', 'grc.io/$PROJECT_ID/cloud_run_image_hanksel:latest', '.' ]
 images:
-- 'gcr.io/$PROJECT_ID/cloud_run_image_hanksel'
+- 'gcr.io/$PROJECT_ID/cloud_run_image_hanksel:latest'
