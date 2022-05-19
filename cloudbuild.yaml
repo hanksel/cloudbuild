@@ -14,4 +14,6 @@ steps:
     - 'us-east4'
     - '--platform'
     - 'managed'
+    - '--port'
+    - '3000'
     - '--allow-unauthenticated'
