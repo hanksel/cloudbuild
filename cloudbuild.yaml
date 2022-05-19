@@ -1,5 +1,5 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: [ 'build', '-t', 'grc.io/$PROJECT_ID/cloud_run_image_hanksel', '.' ]
+  args: [ 'build', '-t', 'gcr.io/test-generales/github.com/hanksel/cloudbuild:$COMMIT_SHA', '.' ]
 images:
-- 'grc.io/$PROJECT_ID/cloud_run_image_hanksel'
+- 'gcr.io/test-generales/github.com/hanksel/cloudbuild:$COMMIT_SHA'
