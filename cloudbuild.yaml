@@ -7,7 +7,7 @@ steps:
     - 'deploy'
     - 'cloudrunservice-hanksel'
     - '--image'
-    - 'gcr.io/$PROJECT_ID/cloud_run_image_hanksel'
+    - 'gcr.io/$PROJECT_ID/github.com/hanksel/cloud_run_image_hanksel:$COMMIT_SHA'
     - '--region'
     - 'us-east4'
     - '--platform'
