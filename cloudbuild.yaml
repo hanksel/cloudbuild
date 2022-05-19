@@ -1,0 +1,18 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: [ 'build', '-t', 'grc.io/$PROJECT_ID/cloud_run_image_hanksel', '.' ]
+images:
+- 'grc.io/$PROJECT_ID/cloud_run_image_hanksel'
+
+- name: 'gcr.io/cloud-builders/gcloud'
+  args:
+  - 'run'
+  - 'deploy'
+  - 'cloudrunservice-hanksel'
+  - '--image'
+  - 'grc.io/$PROJECT_ID/cloud_run_image_hanksel'
+  - '--region'
+  - 'us-east4'
+  - '--platform'
+  - 'managed'
+  - '--allow-unauthenticated'
